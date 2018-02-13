@@ -5,13 +5,7 @@ import { Code } from '../styles/style';
 import s from '../styles/home.style';
 
 export default function Home() {
-  const repoReadmeLink = text => (
-    <Interactive
-      as="a"
-      {...s.link}
-      href="https://github.com/rafrex/spa-github-pages#readme"
-    >{text}</Interactive>
-  );
+ 
 
   return (
     <div>
@@ -24,22 +18,22 @@ export default function Home() {
         with single page apps (like this one).
       </p>
       <p style={s.p}>
-        Please see the {repoReadmeLink('repo readme')} for instructions on how to
+        Please see the repoReadmeLink for instructions on how to
         use this boilerplate to deploy your own single page app using GitHub Pages.
       </p>
       <div style={s.pageLinkContainer}>
         <Interactive
           as={Link}
           {...s.link}
-          to="/example"
-        >Example page</Interactive>
+          to="/Work1"
+        >Work1</Interactive>
       </div>
       <div style={s.pageLinkContainer}>
         <Interactive
           as={Link}
           {...s.link}
-          to="/example/two-deep?field1=foo&field2=bar#boom!"
-        >Example two deep with query and hash</Interactive>
+          to="/Work2"
+        >Work2</Interactive>
       </div>
     </div>
   );
