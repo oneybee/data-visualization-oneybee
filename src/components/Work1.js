@@ -5,25 +5,24 @@ import ExampleTwoDeepComponent from './ExampleTwoDeepComponent';
 import PageNotFound from './PageNotFound';
 import Work2 from './Work2';
 import s from '../styles/exampleComponent.style';
-import { LineChart, Line } from 'recharts';
+import {PieChart, Pie, Legend, Tooltip} from 'Recharts';
+
+const data01 = [{name: 'Java', value: 14.988}, {name: 'C', value: 11.857},
+                  {name: 'C++', value: 5.726}, {name: 'Python', value: 5.726},
+                  {name: 'C#', value: 4.453}, {name: 'Visual Basic .NET', value: 4.072}
+                
+                  ]
 
 
-const data = [
-      {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
-      {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
-      {name: 'Page C', uv: 2500, pv: 9800, amt: 2290},
-      {name: 'Page D', uv: 2780, pv: 3908, amt: 2000},
-      {name: 'Page E', uv: 1890, pv: 4800, amt: 2181},
-      {name: 'Page F', uv: 2390, pv: 3800, amt: 2500},
-      {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
-];
 
 const ExamplePageText = () => (
   <p style={s.p}>
-    <LineChart width={400} height={400} data={data}>
-  <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-  </LineChart>
-  Hello
+      <PieChart width={800} height={400}>
+        <Pie isAnimationActive={false} data={data01} cx={200} cy={200} outerRadius={120} fill="#2ECCFA" label/>
+
+        <Tooltip/>
+       </PieChart>
+  Feb 2018 전세계의 엔지니어, 코스 등의 순위를 기반으로한 상위 6개의 프로그래밍 언어
   </p>
 );
 

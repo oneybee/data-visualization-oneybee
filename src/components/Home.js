@@ -5,35 +5,36 @@ import { Code } from '../styles/style';
 import s from '../styles/home.style';
 
 export default function Home() {
+  const datalink = text => (
+    <Interactive
+      as="a"
+      {...s.link}
+      href="https://www.tiobe.com/tiobe-index/"
+      >{text}</Interactive>
+);
  
 
   return (
     <div>
       <p style={s.p}>
-        This is an example single page app built
-        with React and React&nbsp;Router using {' '}
-        <Code>BrowserRouter</Code>. Navigate with the links below and
-        refresh the page or copy/paste the url to test out the redirect
-        functionality deployed to overcome GitHub&nbsp;Pages incompatibility
-        with single page apps (like this one).
+        프로그래밍 언어 순위를 알아보자
       </p>
       <p style={s.p}>
-        Please see the repoReadmeLink for instructions on how to
-        use this boilerplate to deploy your own single page app using GitHub Pages.
+        data를 찾는데 있어서 참고한 {datalink('사이트')}
       </p>
       <div style={s.pageLinkContainer}>
         <Interactive
           as={Link}
           {...s.link}
           to="/Work1"
-        >Work1</Interactive>
+        >Feb 2018</Interactive>
       </div>
       <div style={s.pageLinkContainer}>
         <Interactive
           as={Link}
           {...s.link}
           to="/Work2"
-        >Work2</Interactive>
+        >JavaScript 순위변화</Interactive>
       </div>
     </div>
   );
