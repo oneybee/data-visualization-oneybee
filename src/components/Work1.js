@@ -18,7 +18,7 @@ const data01 = [{name: 'Java', value: 14.988}, {name: 'C', value: 11.857},
 const ExamplePageText = () => (
   <p style={s.p}>
       <PieChart width={800} height={400}>
-        <Pie isAnimationActive={false} data={data01} cx={200} cy={200} outerRadius={120} fill="#2ECCFA" label/>
+        <Pie isAnimationActive={false} data={data01} cx={200} cy={200} outerRadius={120} fill="#003399" label/>
 
         <Tooltip/>
        </PieChart>
