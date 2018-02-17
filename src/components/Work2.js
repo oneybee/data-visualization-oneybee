@@ -25,7 +25,7 @@ const ExamplePageText = () => (
           <YAxis dataKey="순위"/>
           <CartesianGrid strokeDasharray="3 3"/>
           <Tooltip/>
-          <Area type='monotone' dataKey='순위' stroke='#AEB404' fill='#F4FA58' />
+          <Area type='monotone' dataKey='순위' stroke='#31B404' fill='#2EFE64' />
         </AreaChart>
        
   JavaScript의 순위변화
